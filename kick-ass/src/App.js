@@ -1,10 +1,22 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './pages/Home';
+import Result from './pages/Result';
+import './styles/global.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Justiça para sempre!</h1>
-    </div>
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Home />,
+  },
+  {
+    path: '/result',
+    element: <Result />,
+  }
+]); 
+
+export default function App()
+{
+  return(
+    <RouterProvider router={ router } />
   );
-}
-
-export default App;
+};
