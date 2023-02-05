@@ -9,12 +9,12 @@
 | 17/0045269  |  Sara Campos |
 
 ## Sobre 
-Esse projeto visa aplicar o algoritmo de Knapsack com abordagem de programação dinâmica no contexto de um sistema que seleciona quais missões devem ser priorizadas numa patrulha considerando os fatores de urgência e distância. 
+Esse projeto visa aplicar o algoritmo de Knapsack com abordagem de programação dinâmica no contexto de um sistema que seleciona quais missões devem ser priorizadas numa patrulha considerando os fatores de urgência e distância (ida e volta do QG). 
 
 ## Screenshots
-![tela1](./images/tela1.png)
-![tela2](./images/tela2.png)
-![tela3](./images/tela3.png)
+![tela1](./public/tela1.png)
+![tela2](./public/tela2.png)
+![tela3](./public/tela3.png)
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
@@ -31,4 +31,3 @@ Após acessar o projeto no browser, o usuário irá encontrar uma página com al
 
 ## Vídeo 
 O vídeo explicando o projeto pode ser acessado através da pasta assets na raiz do projeto após a clonagem do repositório.
-
