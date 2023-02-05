@@ -16,7 +16,7 @@
   margin: 0;
   box-sizing: border-box;
   outline: none !important;
-  font-family: 'Poppins';
+  font-family: 'Anton'!important;
   color: var(--deep-yellow);
 }
 

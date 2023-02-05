@@ -6,10 +6,11 @@ export default function Home() {
   return(
     <div className='home' >
       <img src={ logo } />
-      <p>Numa noite em Nova Iorque Big Daddy intercepta vários chamados da polícia 
+      <p> Numa noite em Nova Iorque Big Daddy intercepta vários chamados da polícia 
         e se prepara para sair em missão com Kick-Ass e Hit-Girl. 
-        <br/> Antes de tudo, Big Daddy utilizará um sistema para ajudá-lo a descobrir para onde ir primeiro
-        baseado no nível de urgência do chamado e distância de onde estão. </p>
+         Antes de tudo, Big Daddy utilizará um sistema para ajudá-lo a descobrir para onde ir primeiro
+        baseado no nível de urgência do chamado e distância de onde estão. 
+        Após cada missão, eles devem retornar ao QG para buscar novos equipamentos. </p>
         <img className='big-daddy' src={ bigdaddy } />
         <a href='/result'>Continuar</a>
     </div>

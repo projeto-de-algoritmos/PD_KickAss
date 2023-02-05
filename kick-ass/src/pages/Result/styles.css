@@ -1,0 +1,53 @@
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 4rem 0;
+  position: relative;
+}
+
+.result p {
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.result img.kick-ass {
+  width: 25%;
+  position: absolute;
+  left: 5%;
+}
+
+.result img.hit-girl {
+  width: 20%;
+  position: absolute;
+  right: 5%;
+}
+
+
+.result>button {
+  padding: 0.25rem 0.75rem;
+  margin-top: 1rem;
+  border-radius: 0;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--deep-green);
+  background-color: transparent;
+}
+
+.result h2 {
+  margin-top: 1.5rem;
+}
+
+.result .call-container {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  max-width: 500px;
+  align-items: center;
+}
