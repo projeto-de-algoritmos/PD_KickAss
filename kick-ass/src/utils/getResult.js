@@ -5,7 +5,7 @@ export function getResult(items, limit) {
   );
 
   items = items.sort((a, b) => {
-    return a.urgency - b.urgency;
+    return b.urgency - a.urgency;
   });
 
   var m = Array(items.length);
