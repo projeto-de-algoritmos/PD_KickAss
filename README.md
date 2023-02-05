@@ -1,45 +1,34 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
+# Kick-Ass
 
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
-
-**Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Número da Lista**: 42<br>
+**Conteúdo da Disciplina**: Programação dinâmica<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 17/0045269  |  Sara Campos |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+Esse projeto visa aplicar o algoritmo de Knapsack com abordagem de programação dinâmica no contexto de um sistema que seleciona quais missões devem ser priorizadas numa patrulha considerando os fatores de urgência e distância. 
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+![tela1](./images/tela1.png)
+![tela2](./images/tela2.png)
+![tela3](./images/tela3.png)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JavaScript<br>
+**Framework**: React<br>
+
+Para rodar o projeto é necessário após a clonagem do repositório e dentro da raiz do projeto rodar os seguintes comandos: 
+
+    cd kick-ass
+    npm install
+    npm start
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Após acessar o projeto no browser, o usuário irá encontrar uma página com algumas informações que o encaminhará para adicionar os chamados. Já nesta página de formulário, ele poderá informar a distância máxima que poderão percorrer na noite de patrula e adicionar quais os chamados, a distância e urgência de cada um. A partir daí o algoritmo irá retornar as missões que devem ser priorizadas.
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
-
-
-
+## Vídeo 
+O vídeo explicando o projeto pode ser acessado através da pasta assets na raiz do projeto após a clonagem do repositório.
 
