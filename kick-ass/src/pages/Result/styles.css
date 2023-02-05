@@ -62,8 +62,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
   margin: auto;
+  height: fit-content;
+  width: fit-content;
 }
 
 .ReactModal__Content .result-modal-content {
@@ -71,9 +72,15 @@
   flex-direction: column;
   gap: 1rem;
   width: 100%;
+  padding: 2rem;
   height: 100%;
-  max-width: 400px;
+  justify-content: center;
+  max-width: 450px;
   text-align: center;
 }
 
-
+.ReactModal__Content .missions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

@@ -8,13 +8,13 @@ import Modal from 'react-modal';
 import { getResult } from '../../utils/getResult';
 
 export default function Result() {
-  const [hours, setHours] = useState(null);
+  const [distance, setDistance] = useState(undefined);
   const [modalOpen, setModalOpen] = useState(false);
   const [missions, setMissions] = useState([]);
   const [result, setResult] = useState([]);
 
   function handleResult() {
-    const res = getResult(missions, hours);
+    const res = getResult([{}, ...missions], distance);
     console.log(res);
     setResult(res);
     setModalOpen(true);
@@ -23,25 +23,25 @@ export default function Result() {
   return (
     <div className='result'>
       <p>Adicione uma lista de chamados da Polícia de Nova Iorque,
-        acompanhados de seu nível de urgência numa escala de 1 a 10 e distância em km a partir do QG,
-        além da quantidade total de horas que serão gastas na patrulha de hoje.
+        acompanhados de seu nível de urgência numa escala de 0 a 10 e distância em km a partir do QG,
+        além da distância máxima que poderá ser percorrida na patrulha de hoje.
       </p>
-      <img src={kickass} className='kick-ass' />
-      <img src={hitgirl} className='hit-girl' />
+      <img alt='img' src={kickass} className='kick-ass' />
+      <img alt='img' src={hitgirl} className='hit-girl' />
       <Input customStyles={{
         marginTop: '1.5rem',
-      }} type='number' label='Tempo da missão' input={hours} placeholder='Total de horas' onChange={(value) => setHours(value)} />
+      }} type='number' label='Distância máxima em km' input={distance} placeholder='Distância total' onChange={(value) => setDistance(value)} />
       <button onClick={() => handleResult()}>Ver resultado</button>
       <Form onSubmit={(mission) => {
         setMissions([mission, ...missions])
-        const lastMission = document.querySelector('#last-item')
-        lastMission?.scrollIntoView({ behavior: 'smooth' })
+        window.scrollTo(0, document.body.scrollHeight*4)
       }} />
       <h2>Lista de chamados:</h2>
       {
-        missions.map((mission, index) => {
+        missions.map((mission) => {
+          if(!mission.call) return null
           return (
-            <div className='call-container' id={index === missions.length - 1 ? 'last-item' : ''} >
+            <div key={ mission.call } className='call-container' >
               <p>Chamado: {mission.call}</p>
               <p>Distância: {mission.distance}</p>
               <p>Urgência: {mission.urgency}</p>
@@ -55,10 +55,9 @@ export default function Result() {
       >
         <div className='result-modal-content'>
           <p>Estão listadas abaixo as missões que devem ser priorizadas para defender melhor a cidade
-            considerando a urgência dos chamados. Foi considerada a velocidade de 80km/h. </p>
+            considerando a urgência dos chamados. </p>
           <div className='missions-list'>
-            {missions.map((mission, index) => {
-                if(!result.some((item) => item === index)) return null
+            {result.map((mission) => {
                 return (
                   <div>
                     <p>Chamado: {mission.call}</p>

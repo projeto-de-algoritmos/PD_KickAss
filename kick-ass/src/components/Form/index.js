@@ -17,7 +17,7 @@ export default function Form({ onSubmit }) {
     } }>
       <Input input={ item.call } label='Chamado' placeholder='Identificação do chamado' onChange={ (value) => setItem({ ...item, call:value }) } />
       <Input type='number' input={ item.distance } label='Distância' placeholder='Distância do QG' onChange={ (value) => setItem({ ...item, distance:value }) } />
-      <Input type='number' input={ item.urgency } label='Urgência' placeholder='Nível de urgência' onChange={ (value) => setItem({ ...item, urgency:value }) } />
+      <Input type='number' max='10' input={ item.urgency } label='Urgência' placeholder='Nível de urgência' onChange={ (value) => setItem({ ...item, urgency:value }) } />
       <button type='submit' >Adicionar chamado</button>
     </form>
   );
